@@ -1,0 +1,27 @@
+{
+  "name": "azmicat_homepage_css_template",
+  "version": "0.0.1",
+  "description": "azmicat_homepage_css_template for Hatena Blog theme",
+  "author": "azimicat",
+  "license": "MIT",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "npm-run-all -p watch server",
+    "server": "browser-sync start -c config.js",
+    "build": "npm run clean && npm-run-all -s sass:build autoprefixer",
+    "sass:build": "sass ./src/scss/main.scss ./dist/css/main.css",
+    "autoprefixer": "postcss --use autoprefixer -r ./dist/css/main.css",
+    "clean": "rimraf ./dist",
+    "watch": "chokidar \"src/\" -c \"npm run build\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
+    "chokidar-cli": "^1.2.0",
+    "normalize.css": "^7.0.0",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.3"
+  }
+}
