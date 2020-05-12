@@ -1,5 +1,5 @@
-# azimicat_homepage
-azmicat名でやるホームページのCSS
+# hateb_stylesheet_vol1
+はてなブログのテンプレート
 
 ## server の起動方法
 ```
